@@ -3,14 +3,91 @@
   <head>
     <title> Joe Meeting Minutes </title>
     <!-- <link rel="icon"> pepehi.gif</link> -->
+    <!-- font code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* 
+     * Checklist: 
+     * [ ] CSS Topics 
+     *   [x] Comment
+     *   [x] Color
+     *   [x] Css Variables and Fallbacks
+     *   [x] Background
+     *   [x] Unit
+     *   [x] Box Model 
+     *   [x] Text
+     *   [x] Display
+     *   [x] Sizing
+     *   [x] Position
+     *   [x] Pseudo-class
+     *   [ ] Layouts
+     *   [ ] Responsiveness
+     *   [ ] Fonts
+     * [ ] CSS Selectors 
+     * [ ] CSS Validation 
+     */
+    
+    :root {
+      --h3color: #ccb2b7;
+    }
+
+    h3 {
+      color: var(--h3color, pink);
+    }
+    header {
+      background-color: grey;
+      border-style: inset;
+      border-radius: 2em;
+      margin-bottom: 10pt;
+    }
+    section {
+      background-color: rgb(192, 192, 192);
+      /* border-style: inset; */
+      /* border-width: 10px; */
+      border: .5rem ridge rgb(80, 132, 184);
+      border-radius: 20px;
+      padding-top: .5vh;
+      border-width: .4em;
+      margin-bottom: .2em;
+    }
+    .important {
+      margin: 1cm;
+      padding: .1in;
+    }
+    #signup {
+      color: color-mix(in lch, hsl(293, 50%, 66%), maroon);
+      text-decoration: underline firebrick;
+      text-align: center;
+    }
+    .middle {
+      text-align: center;
+    }
+    #emergency:hover {
+      color: red;
+    }
+    
+    @media (width < 50em) {
+      body {
+      font-family: "IBM Plex Mono", monospace;
+      font-weight: 100;
+      font-style: normal;
+      }
+    }
+  </style>
   </head>
   <body>
-      <header>
+      <header style="position: sticky;">
         <h1> Joe Moments Meeting Minutes </h1>
         <h2> Documentation </h2>
         <h3> Apr 16, 2021 </h3>
       </header>
       <main> 
+        <div class="middle">
+          dubz
+        </div>
+        <div style="display: flex; flex-direction: row;"> 
         <section>
           Attendance list
           <ul>
@@ -37,6 +114,9 @@
             <li> Swimmer needs to conduct a boston joe on Bobby </li>
           </ul>
         </section>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 33% [col-start]);">
         <section>
           new business
             <ul>
@@ -49,18 +129,19 @@
                 <li> When is the next joe meeting? </li>
               </ul>
           </section>
-          <section>
+          <section style="max-width: 80%;">
             diagrams
               <div> <img src="pepehi.gif" alt="pepehands!"></div> 
           </section>
+        </div>
         <details>
-          <summary>
+          <summary id="emergency">
             Emergency Cat Button - Click Me!
           </summary>
             <div> <img src="https://pusheen.com/wp-content/uploads/2020/09/Preview-Image.jpg" alt="pepehands!" width="200"> </div>
         </details>
-        <section>
-            <h3> Add your name to the attendance</h3>
+        <section class="important">
+            <h3 id="signup"> Add your name to the attendance</h3>
             <form>
                 <label for="joename"> Joe name: </label><br>
                 <input type="text" id="joename" name="fname"><br>
@@ -79,8 +160,16 @@
             Uh oh browser is dumb dumb so can't see audio   
             </audio>
         </div>
+      <div style="background-color: green; display: inline-block">
+        hi im <span style="display: flex"> paul </span>
+      </div>
       </main>
-      <footer> Bottom Text </footer>
+      <footer>
+        <div style="position: fixed; bottom: 0em; width: 100%; background-color: blueviolet;">
+         Bottom Text  
+        </div> 
+        
+      </footer>
   </body>
 </html>
 
