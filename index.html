@@ -67,19 +67,54 @@
     #emergency:hover {
       color: red;
     }
-    
+    section[target], .middle {
+      background-color: aquamarine;
+    }
     @media (width < 50em) {
-      body {
+      * {
       font-family: "IBM Plex Mono", monospace;
-      font-weight: 100;
+      font-weight: 400;
       font-style: normal;
       }
     }
+    /* .ubusiness ~ .abusiness {
+      background-color: magenta;
+    } */
+    #agenda ol {
+      color: red;
+    }
+    ol > li {
+      border-bottom: 1px solid black;
+    }
+    h1 ~ h2 {
+      color: white;
+    }
+    main {
+      padding-bottom: 1em;
+    }
+    h1 + p {
+      background-color: #333;
+      color: #fff;
+      padding: .5em;
+    }
+    main section h2 {
+      color: teal;
+    }
+    div:has(p) {
+      background: rgb(75, 38, 38);
+    }
+    div {
+      & p {
+        border: 2px dotted black;
+      }
+    }
+    
   </style>
   </head>
   <body>
       <header style="position: sticky;">
         <h1> Joe Moments Meeting Minutes </h1>
+          <p> Location: at the usual...</p>
         <h2> Documentation </h2>
         <h3> Apr 16, 2021 </h3>
       </header>
@@ -88,7 +123,7 @@
           dubz
         </div>
         <div style="display: flex; flex-direction: row;"> 
-        <section>
+        <section target="highlight">
           Attendance list
           <ul>
             <li> Pickle Joe </li>
@@ -99,8 +134,9 @@
             <li> Joesati </li>
           </ul>
         </section>
-        <section>
-          agenda
+        <section id="agenda">
+          <h2> agenda</h2>
+          <p> for all the needs</p>
           <ol>
             <li> Discuss the <b> Joe Moment</b> </li>
             <li> Gain joe <i> momentum </i> </li>
@@ -108,7 +144,7 @@
             <li> Make joe mead </li>
           </ol>
         </section>
-        <section>
+        <section id="ubusiness">
           unfinished business
           <ul>
             <li> Swimmer needs to conduct a boston joe on Bobby </li>
@@ -117,7 +153,7 @@
         </div>
 
         <div style="display: grid; grid-template-columns: repeat(3, 33% [col-start]);">
-        <section>
+        <section id="nbusiness">
           new business
             <ul>
               <li> What will we eat? </li>
@@ -160,8 +196,11 @@
             Uh oh browser is dumb dumb so can't see audio   
             </audio>
         </div>
-      <div style="background-color: green; display: inline-block">
-        hi im <span style="display: flex"> paul </span>
+      <div id="top" style="background-color: green; display: inline-block">
+        <span> wawa </span>hi im <span style="display: flex"> paul </span>
+      </div>
+      <div id="bototm">
+        hihi
       </div>
       </main>
       <footer>
